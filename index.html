@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Switch Statement Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 8px; font-size: 16px; }
+    #result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <h1>Switch Statement in JavaScript</h1>
+
+  <label for="dayInput">Enter a day of the week:</label>
+  <input type="text" id="dayInput" placeholder="e.g. Monday" />
+  <button onclick="checkDay()">Check Day</button>
+
+  <div id="result"></div>
+
+  <script>
+    function checkDay() {
+      const day = document.getElementById('dayInput').value.trim().toLowerCase();
+      let message;
+
+      switch(day) {
+        case 'monday':
+          message = "It's Monday, start of the week!";
+          break;
+        case 'tuesday':
+          message = "It's Tuesday, keep going!";
+          break;
+        case 'wednesday':
+          message = "It's Wednesday, halfway there!";
+          break;
+        case 'thursday':
+          message = "It's Thursday, almost Friday!";
+          break;
+        case 'friday':
+          message = "It's Friday, weekend is near!";
+          break;
+        case 'saturday':
+          message = "It's Saturday, enjoy your weekend!";
+          break;
+        case 'sunday':
+          message = "It's Sunday, time to relax!";
+          break;
+        default:
+          message = "Please enter a valid day of the week.";
+      }
+
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+
+</body>
+</html>
